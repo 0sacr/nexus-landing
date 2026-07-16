@@ -10,9 +10,6 @@ import { fileURLToPath, URL } from 'node:url'
  * - test 字段为 Vitest 配置（jsdom 环境）
  */
 export default defineConfig({
-  /** GitHub Pages 部署在子目录 /nexus-landing/ 下，静态资源需要加此前缀 */
-  base: '/nexus-landing/',
-
   plugins: [vue()],
 
   resolve: {

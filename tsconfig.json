@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    /* ── 编译目标与模块 ──────────────────── */
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "moduleResolution": "bundler",
+
+    /* ── 路径解析 ────────────────────────── */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    /* ── 严格模式（简历亮点：全量 strict） ── */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* ── JSX / Vue ───────────────────────── */
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+
+    /* ── 输出控制 ────────────────────────── */
+    "noEmit": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+
+    /* ── 类型获取 ────────────────────────── */
+    "types": ["vite/client"]
+  },
+
+  /* ── 包含/排除范围 ────────────────────── */
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.vue",
+    "env.d.ts"
+  ],
+  "exclude": ["node_modules", "dist"],
+
+  /* ── Vite 接管构建，tsc 仅做类型检查 ──── */
+  "references": [
+    { "path": "./tsconfig.node.json" }
+  ]
+}

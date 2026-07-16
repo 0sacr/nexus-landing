@@ -9,8 +9,8 @@
     "build:only": "vite build",
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit",
-    "lint": "eslint . --ext .vue,.ts",
-    "lint:fix": "eslint . --ext .vue,.ts --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write \"src/**/*.{vue,ts,css}\"",
     "test": "vitest run",
     "test:watch": "vitest"
